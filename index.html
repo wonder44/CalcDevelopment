@@ -1,0 +1,34 @@
+  <!DOCTYPE html>
+  <html >
+  <head>
+    <meta charset="UTF-8">
+    <title>CALCULATOR</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    
+   <div class = "all">
+    <div ng-app="calc">
+    <div ng-controller="myController">
+      <div class="back">
+        <div class="calc">
+          <div id="bc" ng-click="doMath(i)">=</div>
+          <div id="value" >_{{i}}</div> 
+          <div id="brav" ng-click="i=''">C</div>
+        </div>  
+        <div class="buttons">
+          <div ng-repeat="b in bs"  class = "button">
+            <div ng-click="$parent.i=$parent.i+b.n" id="inbutton">{{b.n}}</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+      <script  src="js/index.js"></script>
+
+  </body>
+  </html>
